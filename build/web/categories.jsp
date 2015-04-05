@@ -51,10 +51,10 @@
                             <tr ng-init="activeUpdate${category.getId()}=false">
                                 <td ng-show="activeUpdate${category.getId()}===false"><c:out value="${category.getTitulo()}"/></td>
                                 <td ng-show="activeUpdate${category.getId()}===false"><c:out value="${category.getDescripcion()}"/></td>
-                                <td ng-show="activeUpdate${category.getId()}===true"><input ng-model="titulo" type="text"></td>
-                                <td ng-show="activeUpdate${category.getId()}===true"><input ng-model="descripcion" type="text"></td>
+                                <td ng-show="activeUpdate${category.getId()}===true"><input ng-model="titulo" type="text" required></td>
+                                <td ng-show="activeUpdate${category.getId()}===true"><input ng-model="descripcion" type="text" required></td>
                                 <td ng-show="activeUpdate${category.getId()}===true"><a href="categoriesController?accion=updateCategory&id=${category.getId()}&titulo={{titulo}}&descripcion={{descripcion}}" class="btn btn-success">Modificar Registro</a></td>
-                                <td><a href="" class="" ng-click="activeUpdate${category.getId()}=!activeUpdate${category.getId()}">Modificar Registro</a></td>
+                                <td><a href="" class="" ng-click="activeUpdate${category.getId()}=!activeUpdate${category.getId()};titulo='${category.getTitulo()}';descripcion='${category.getDescripcion()}'">Modificar Registro</a></td>
                                 <td><a href="categoriesController?accion=deleteCategory&id=<c:out value="${category.getId()}"/>" class="btn btn-success">Eliminar Registro</a></td>
                             </tr>
                         </c:forEach> 
