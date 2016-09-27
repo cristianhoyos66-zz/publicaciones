@@ -1,2 +1,5 @@
 # publicaciones
-proyecto de publicaciones con mongodb
+proyecto de publicaciones hecho con:
+
+  - Java 
+  - MongoDB
